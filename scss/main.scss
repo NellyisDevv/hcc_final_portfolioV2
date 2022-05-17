@@ -212,23 +212,40 @@
   margin: auto;
   .container-one {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template-areas:
+      'b g'
+      'b c'
+      'f z';
     .project-one {
-      grid-row-start: 1;
-      grid-row-end: 3;
-    }
-    .project-one img {
-      width: 100%;
+      grid-area: b;
+      img {
+        width: 100%;
+      }
     }
     .project-two {
-    }
-    .project-two img {
-      width: 100%;
+      grid-area: g;
+      img {
+        width: 100%;
+      }
     }
     .project-three {
+      grid-area: c;
+      img {
+        width: 100%;
+      }
     }
-    .project-three img {
-      width: 100%;
+    .project-four {
+      grid-area: f;
+      img {
+        width: 100%;
+      }
+    }
+    .project-five {
+      grid-area: z;
+      img {
+        width: 100%;
+      }
     }
   }
 }

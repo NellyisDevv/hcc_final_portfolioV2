@@ -267,26 +267,60 @@
 #section-one .container-one {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[2];
+  -ms-grid-rows: (1fr)[3];
   -ms-grid-columns: (1fr)[2];
-      grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+      grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+      grid-template-areas: 'b g' 'b c' 'f z';
 }
 
 #section-one .container-one .project-one {
   -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: b;
 }
 
 #section-one .container-one .project-one img {
   width: 100%;
 }
 
+#section-one .container-one .project-two {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: g;
+}
+
 #section-one .container-one .project-two img {
   width: 100%;
 }
 
+#section-one .container-one .project-three {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: c;
+}
+
 #section-one .container-one .project-three img {
+  width: 100%;
+}
+
+#section-one .container-one .project-four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: f;
+}
+
+#section-one .container-one .project-four img {
+  width: 100%;
+}
+
+#section-one .container-one .project-five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: z;
+}
+
+#section-one .container-one .project-five img {
   width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
