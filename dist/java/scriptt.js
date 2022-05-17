@@ -12,11 +12,12 @@ menuIcon.addEventListener('click', () => {
 // CREATING A DARK THEME FOR WEBSITE
 let icon = document.getElementById('icon');
 
+// WHEN ICON CLICKED TOGGLE CLASS AND CHANGE ICON
 icon.onclick = () => {
   document.body.classList.toggle('dark-theme');
   if (document.body.classList.contains('dark-theme')) {
-    icon.src = '/img/moon.png';
+    icon.src = './img/moon.png';
   } else {
-    icon.src = '/img/sun.png';
+    icon.src = './img/sun.png';
   }
 };
