@@ -231,11 +231,12 @@
 
 /* FIRST SECTION OF THE WEBSITE */
 #section-one {
-  max-width: 100%;
-  margin: auto;
+  height: 100vh;
+  width: 100%;
 }
 #section-one .container-one {
   display: grid;
+  margin: auto;
   grid-template: repeat(3, 1fr)/repeat(2, 1fr);
   grid-template-areas: "b g" "b c" "f z";
 }
@@ -244,28 +245,42 @@
 }
 #section-one .container-one .project-one img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #section-one .container-one .project-two {
   grid-area: g;
 }
 #section-one .container-one .project-two img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #section-one .container-one .project-three {
   grid-area: c;
 }
 #section-one .container-one .project-three img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #section-one .container-one .project-four {
   grid-area: f;
 }
 #section-one .container-one .project-four img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #section-one .container-one .project-five {
   grid-area: z;
 }
 #section-one .container-one .project-five img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */

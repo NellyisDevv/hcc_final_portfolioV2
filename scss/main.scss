@@ -208,10 +208,11 @@
 
 /* FIRST SECTION OF THE WEBSITE */
 #section-one {
-  max-width: 100%;
-  margin: auto;
+  height: 100vh;
+  width: 100%;
   .container-one {
     display: grid;
+    margin: auto;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     grid-template-areas:
       'b g'
@@ -221,30 +222,39 @@
       grid-area: b;
       img {
         width: 100%;
+        object-fit: cover;
       }
     }
     .project-two {
       grid-area: g;
       img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .project-three {
       grid-area: c;
       img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .project-four {
       grid-area: f;
       img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .project-five {
       grid-area: z;
       img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
