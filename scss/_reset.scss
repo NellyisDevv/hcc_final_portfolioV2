@@ -5,3 +5,27 @@
   font-family: Poppins, sans-serif;
   scroll-behavior: smooth;
 }
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+/* SELECTION FOR HOVERING TEXT */
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+/* WEBSITE ROOT COLORS FOR DEFAULT THEME */
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  --crazy: purple;
+}
+/* BODY AUTOMATICALLY CHANGES BACKGROUND TO DARK MODE */
+body {
+  background-color: var(--primary-color);
+}
+/* TOGGLE DARK THEME ON WEBSITE */
+.dark-theme {
+  --primary-color: white;
+  --secondary-color: black;
+}

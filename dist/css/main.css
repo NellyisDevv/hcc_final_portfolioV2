@@ -7,6 +7,11 @@
   scroll-behavior: smooth;
 }
 
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
 /* SELECTION FOR HOVERING TEXT */
 ::-moz-selection {
   background-color: var(--secondary-color);
@@ -22,6 +27,11 @@
   --primary-color: black;
   --secondary-color: white;
   --crazy: purple;
+}
+
+/* BODY AUTOMATICALLY CHANGES BACKGROUND TO DARK MODE */
+body {
+  background-color: var(--primary-color);
 }
 
 /* TOGGLE DARK THEME ON WEBSITE */
@@ -90,7 +100,7 @@
   /* CREATING THE LINES IN THE SCROLL DOWN BUTTON */
   cursor: pointer;
   /* REMOVING THE ARROWS FROM BEING SO CLOSE TOGETHER */
-  /* ANIMATIONS TO MAKE THE LINES MOVE */
+  /* ANIMATIONS TO MAKE THE LINES MOVE IN SCROLL-BAR */
 }
 .scroll-down::before, .scroll-down::after {
   content: "";
@@ -231,29 +241,41 @@
 
 /* FIRST SECTION OF THE WEBSITE */
 #section-one {
-  height: 100vh;
   width: 100%;
+  /* CONTAINER-ONE CONTAINING THE FIRST 5 PROJECTS */
 }
 #section-one .container-one {
   display: grid;
   margin: auto;
-  grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+  /* grid-template: 1200px 1200px 800px / repeat(auto-fit, minmax(100px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
+  grid-auto-rows: 1200px;
   grid-template-areas: "b g" "b c" "f z";
+  /* FIRST PROJECT */
+  /* SECOND PROJECT */
+  /* THIRD PROJECT */
+  /* FOURTH PROJECT */
+  /* FIFTH PROJECT */
 }
 #section-one .container-one .project-one {
   grid-area: b;
 }
 #section-one .container-one .project-one img {
+  display: block;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  background-size: cover;
+  overflow: hidden;
 }
 #section-one .container-one .project-two {
   grid-area: g;
 }
 #section-one .container-one .project-two img {
-  width: 100%;
+  display: block;
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -261,6 +283,7 @@
   grid-area: c;
 }
 #section-one .container-one .project-three img {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
