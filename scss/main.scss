@@ -8,7 +8,6 @@
   height: 96vh;
   background-color: var(--primary-color);
   background-size: cover;
-  position: relative;
 }
 
 /* PAGE LOGO CONTAINER "NELLYISDEV" */
@@ -29,20 +28,17 @@
 /* WELCOMING MYSELF CONTAINER */
 .welcome-container {
   color: var(--secondary-color);
-  padding: 3.5em;
-  z-index: 5;
   text-align: center;
-  max-width: 100%;
-  margin: 300px auto;
-  /* Hello, I'm Nelson A Web Developer HEADER */
+  margin: auto;
+  /* Hello, Im Nelson a Web Developer */
   h2 {
-    font-size: 4vh;
+    font-size: 2.9em;
     font-weight: 100;
     font-weight: 300;
   }
   /* CURRENTLY ENROLLED AT HCC TEXT */
   p {
-    font-size: 1.3vh;
+    font-size: 1em;
     line-height: 26px;
     margin-top: 10px;
     font-family: Poppins, sans-serif;
@@ -57,7 +53,7 @@
   border: 2px solid var(--secondary-color);
   position: absolute;
   left: 48%;
-  bottom: 50px;
+  bottom: 80px;
   border-radius: 50px;
   /* CREATING THE LINES IN THE SCROLL DOWN BUTTON */
   cursor: pointer;
@@ -98,45 +94,6 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 700px) {
-  .logo-container {
-    h1,
-    a {
-      color: var(--secondary-color);
-      text-decoration: none;
-      font-weight: 200;
-      letter-spacing: 8px;
-      font-size: 1em;
-      text-transform: uppercase;
-      position: relative;
-      right: 26px;
-    }
-  }
-  .welcome-container {
-    margin: -50px auto;
-    h2 {
-      font-size: 5vh;
-    }
-    p {
-      font-size: 2.4vh;
-    }
-  }
-  .scroll-down {
-    height: 30px;
-    width: 20px;
-    border: 2px solid var(--secondary-color);
-    position: absolute;
-    left: 46%;
-    bottom: 20px;
-    cursor: pointer;
-    &::before,
-    &::after {
-      height: 8px;
-      width: 8px;
-    }
-  }
-}
-
 /* NAVBAR PUSH OUT MENU */
 .navbar {
   width: 100%;
@@ -151,7 +108,6 @@
   transition: 0.4s;
   background-color: var(--primary-color);
   color: var(--primary-color);
-  z-index: 3;
   /* border-radius: 40% 0 0 40%; */
 
   /* NAVBAR LIST */
@@ -245,10 +201,15 @@
   display: grid;
   margin: auto;
   /* grid-template: 1200px 1200px 800px / repeat(auto-fit, minmax(100px, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  grid-auto-rows: 600px;
+  grid-template-areas:
+    'a b'
+    'a c'
+    'd e';
   /* FIRST PROJECT */
   .project-one {
+    grid-area: a;
     img {
       display: block;
       height: 100%;
@@ -256,45 +217,44 @@
       object-fit: cover;
       background-size: cover;
       overflow: hidden;
-      grid-area: a;
     }
   }
   /* SECOND PROJECT */
   .project-two {
+    grid-area: b;
     img {
       display: block;
       height: 100%;
       width: 100%;
       object-fit: cover;
-      grid-area: b;
     }
   }
   /* THIRD PROJECT */
   .project-three {
+    grid-area: c;
     img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      grid-area: c;
     }
   }
   /* FOURTH PROJECT */
   .project-four {
+    grid-area: d;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      grid-area: d;
     }
   }
   /* FIFTH PROJECT */
   .project-five {
+    grid-area: e;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      grid-area: e;
     }
   }
 }
