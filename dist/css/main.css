@@ -91,7 +91,7 @@ a:active {
   text-decoration: none;
   font-weight: 200;
   letter-spacing: 8px;
-  font-size: 1.5vh;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
@@ -183,6 +183,43 @@ a:active {
   }
 }
 
+@media (min-width: 320px) and (max-width: 700px) {
+  .logo-container h1,
+.logo-container a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 200;
+    letter-spacing: 8px;
+    font-size: 1em;
+    text-transform: uppercase;
+    position: relative;
+    right: 26px;
+  }
+
+  .welcome-container {
+    margin: -50px auto;
+  }
+  .welcome-container h2 {
+    font-size: 5vh;
+  }
+  .welcome-container p {
+    font-size: 2.4vh;
+  }
+
+  .scroll-down {
+    height: 30px;
+    width: 20px;
+    border: 2px solid var(--secondary-color);
+    position: absolute;
+    left: 46%;
+    bottom: 20px;
+    cursor: pointer;
+  }
+  .scroll-down::before, .scroll-down::after {
+    height: 8px;
+    width: 8px;
+  }
+}
 /* NAVBAR PUSH OUT MENU */
 .navbar {
   width: 100%;
