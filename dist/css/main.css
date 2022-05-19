@@ -9,7 +9,19 @@
 
 html {
   box-sizing: border-box;
+  /* ensures padding and margin will equal to the 
+  entire box and not increase the box in size */
+  /* example would mean if you add 30px padding to
+  a box that is 300px wide and tall the padding will
+  not increase the size of the box but keep the final
+  width and height the same */
   font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /* SELECTION FOR HOVERING TEXT */
@@ -32,12 +44,31 @@ html {
 /* BODY AUTOMATICALLY CHANGES BACKGROUND TO DARK MODE */
 body {
   background-color: var(--primary-color);
+  color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
 }
 
 /* TOGGLE DARK THEME ON WEBSITE */
 .dark-theme {
   --primary-color: white;
   --secondary-color: black;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 
 /* CREATING THE MAIN HEADER CONTAINER */
@@ -60,7 +91,7 @@ body {
   text-decoration: none;
   font-weight: 200;
   letter-spacing: 8px;
-  font-size: 19px;
+  font-size: 1.5vh;
   text-transform: uppercase;
 }
 
@@ -70,20 +101,20 @@ body {
   padding: 3.5em;
   z-index: 5;
   text-align: center;
-  /* "HELLO, IM NELSON A WEB DEVELOPER */
+  max-width: 100%;
+  margin: 300px auto;
+  /* Hello, I'm Nelson A Web Developer HEADER */
   /* CURRENTLY ENROLLED AT HCC TEXT */
 }
 .welcome-container h2 {
-  font-size: 48px;
+  font-size: 4vh;
   font-weight: 100;
-  position: relative;
-  top: 300px;
   font-weight: 300;
 }
 .welcome-container p {
-  position: relative;
-  top: 310px;
-  line-height: 25px;
+  font-size: 1.3vh;
+  line-height: 26px;
+  margin-top: 10px;
   font-family: Poppins, sans-serif;
   font-weight: 200;
 }
@@ -239,28 +270,34 @@ body {
   transform: rotateZ(405deg) translate(-8px, -6px);
 }
 
-/* FIRST SECTION OF THE WEBSITE */
-#section-one {
-  width: 100%;
-  /* CONTAINER-ONE CONTAINING THE FIRST 5 PROJECTS */
+/* TELLING GRID CARD TO SPAN 2 PLACES VERTICAL */
+.card-tall {
+  grid-row: span 2/auto;
 }
-#section-one .container-one {
+
+.card-tall-half {
+  grid-row: span 3/auto;
+}
+
+/* TELLING CARD TO SPAN 2 PLACES HORIZONAL */
+.card-wide {
+  grid-column: span 2/auto;
+}
+
+/* CONTAINER-ONE CONTAINING THE FIRST 5 PROJECTS */
+.container-one {
   display: grid;
   margin: auto;
   /* grid-template: 1200px 1200px 800px / repeat(auto-fit, minmax(100px, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
-  grid-auto-rows: 1200px;
-  grid-template-areas: "b g" "b c" "f z";
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 100%;
   /* FIRST PROJECT */
   /* SECOND PROJECT */
   /* THIRD PROJECT */
   /* FOURTH PROJECT */
   /* FIFTH PROJECT */
 }
-#section-one .container-one .project-one {
-  grid-area: b;
-}
-#section-one .container-one .project-one img {
+.container-one .project-one img {
   display: block;
   height: 100%;
   width: 100%;
@@ -268,42 +305,35 @@ body {
      object-fit: cover;
   background-size: cover;
   overflow: hidden;
+  grid-area: a;
 }
-#section-one .container-one .project-two {
-  grid-area: g;
-}
-#section-one .container-one .project-two img {
+.container-one .project-two img {
   display: block;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  grid-area: b;
 }
-#section-one .container-one .project-three {
+.container-one .project-three img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   grid-area: c;
 }
-#section-one .container-one .project-three img {
-  display: block;
+.container-one .project-four img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  grid-area: d;
 }
-#section-one .container-one .project-four {
-  grid-area: f;
-}
-#section-one .container-one .project-four img {
+.container-one .project-five img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-#section-one .container-one .project-five {
-  grid-area: z;
-}
-#section-one .container-one .project-five img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  grid-area: e;
 }/*# sourceMappingURL=main.css.map */

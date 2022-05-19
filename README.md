@@ -13,3 +13,5 @@ Learning grid layout has opened me to a new world of responsiveness making my ol
 [https://www.youtube.com/watch?v=jfMHA8SqUL4&list=PLWAmsi2HmB9LS6Casznl4kYMz-JgFCTBv&index=5]
 
 [https://www.codegrepper.com/code-examples/css/css+force+image+to+fill+grid]
+
+[https://stackoverflow.com/questions/24469375/keeping-text-size-the-same-on-zooming]
